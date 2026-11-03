@@ -1,0 +1,37 @@
+{
+  "name": "quibbi",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.17.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "predev": "npm run build -w @quibbi/shared",
+    "dev": "concurrently -k -n api,web \"npm run dev -w @quibbi/api\" \"npm run dev -w @quibbi/web\"",
+    "build": "npm run build -w @quibbi/shared && npm run build -w @quibbi/api && npm run build -w @quibbi/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint apps packages tests playwright.config.ts eslint.config.mjs",
+    "test": "npm run test --workspaces --if-present",
+    "test:browser": "playwright test",
+    "start": "npm run start -w @quibbi/api",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "overrides": {
+    "minimatch": "11.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "concurrently": "9.2.5",
+    "eslint": "10.14.0",
+    "prettier": "3.6.2",
+    "typescript-eslint": "8.72.1"
+  }
+}

@@ -1,0 +1,40 @@
+# Workspace dependencies and build output (at any depth)
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local configuration and secrets; keep the setup template in source control
+.env
+.env.*
+!.env.example
+*.local
+
+# Tests, coverage, and browser authentication state
+coverage/
+playwright-report/
+playwright/.cache/
+playwright/.auth/
+test-results/
+blob-report/
+
+# Tool caches, temporary font tooling, and design inspection artifacts
+.cache/
+.vite/
+.eslintcache
+.tmp/
+.taste-skill/
+.kip/profile.json
+
+# Logs and machine-specific editor/OS files
+*.log
+*.swp
+*.swo
+*~
+.idea/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Keep package-lock.json, source fonts/licenses, and project configuration tracked.

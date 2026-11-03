@@ -1,0 +1,638 @@
+/* Original Quibbi practice desk: rounded brand type, a physical card, light/dark/light pacing. */
+.landing-topbar {
+  width: min(1280px, calc(100% - 96px));
+  height: 88px;
+}
+.landing-topbar .brand {
+  font-size: 34px;
+}
+.landing-nav a {
+  font-size: 13px;
+  font-weight: 500;
+}
+.landing-nav .landing-nav-action {
+  border: 1px solid var(--foreground);
+  border-radius: 999px;
+  padding: 12px 23px;
+}
+.landing-nav a:hover {
+  opacity: 0.65;
+}
+.landing-width {
+  width: min(1200px, calc(100% - 96px));
+  margin-inline: auto;
+}
+.landing h1,
+.landing h2 {
+  font-family: var(--font-brand);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+.landing-hero {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 108px;
+}
+.landing-hero h1 {
+  font-size: clamp(60px, 6.5vw, 88px);
+  line-height: 1.06;
+  max-width: 1050px;
+  margin-inline: auto;
+}
+.heading-word {
+  display: inline-block;
+  white-space: pre;
+}
+.hero-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  margin-top: 22px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.landing [data-slot='button'] {
+  border-radius: 999px;
+  height: 48px;
+  padding-inline: 25px;
+  font-size: 14px;
+}
+.hero-note {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  margin-top: 12px;
+}
+.landing-notices {
+  max-width: 660px;
+  margin: 18px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+.landing-notices:empty {
+  display: none;
+}
+.landing-notices [data-slot='alert'] {
+  border: 0;
+  background: var(--secondary);
+  border-radius: 12px;
+}
+.hero-demo {
+  margin: 36px auto 0;
+  max-width: 820px;
+  scroll-margin-top: 40px;
+}
+.flashcard-demo {
+  width: 100%;
+}
+.demo-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-inline: 5px;
+  margin-bottom: 18px;
+  color: var(--muted-foreground);
+}
+.demo-toolbar > span:first-child {
+  color: var(--foreground);
+  font-weight: 500;
+}
+.flip-card {
+  display: block;
+  width: 100%;
+  height: 330px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  perspective: 1600px;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.flip-card-inner {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 35px 32px;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+.flip-card-front {
+  background: var(--foreground);
+  color: var(--background);
+}
+.flip-card-back {
+  background: #e5e5e5;
+  color: var(--foreground);
+  transform: rotateY(180deg);
+}
+.face-label {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.flip-card-front .face-label,
+.flip-card-front .face-action {
+  color: #c6c6c6;
+}
+.face-question {
+  font-family: var(--font-text);
+  font-size: clamp(42px, 5.6vw, 70px);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+.face-action {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+}
+.face-action svg {
+  width: 17px;
+  height: 17px;
+}
+.demo-caption {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  margin-top: 22px;
+}
+.landing-dark {
+  background: var(--foreground);
+  color: var(--background);
+  padding-block: 120px;
+}
+.principles-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 110px;
+  align-items: start;
+}
+.section-note {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.landing h2 {
+  font-size: clamp(42px, 4.4vw, 64px);
+  line-height: 1.12;
+}
+.principles-heading h2 {
+  max-width: 540px;
+}
+.principles-heading > p {
+  max-width: 380px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #bfbfbf;
+  margin-top: 28px;
+}
+.principles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  padding-top: 16px;
+}
+.principles-list article {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.principles-list article > svg {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.principles-list h3 {
+  font-size: 21px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.principles-list p {
+  font-size: 14px;
+  color: #bfbfbf;
+  line-height: 1.75;
+  max-width: 330px;
+}
+.landing-workflow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 110px;
+  align-items: center;
+  padding-block: 140px;
+}
+.workflow-copy h2 {
+  max-width: 510px;
+}
+.workflow-copy > p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--muted-foreground);
+  max-width: 400px;
+  margin-top: 25px;
+}
+.workflow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 30px;
+  padding-block: 6px;
+}
+.workflow-link svg {
+  width: 20px;
+  height: 20px;
+}
+.workflow-specimen {
+  background: var(--secondary);
+  padding: 26px;
+  border-radius: 20px;
+}
+.specimen-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.specimen-title > span:last-child {
+  font-size: 11px;
+  color: var(--muted-foreground);
+  font-weight: 400;
+  white-space: nowrap;
+}
+.specimen-face {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 21px 24px;
+  min-height: 133px;
+}
+.specimen-face > span {
+  font-size: 11px;
+  color: var(--muted-foreground);
+}
+.specimen-face p {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  margin-top: 19px;
+}
+.specimen-answer {
+  margin-top: 12px;
+  min-height: 173px;
+}
+.specimen-answer p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.specimen-note {
+  font-size: 11px;
+  color: var(--muted-foreground);
+  margin-top: 20px;
+}
+.landing-close {
+  background: #e9e9e9;
+  padding-top: 110px;
+  text-align: center;
+}
+.landing-close h2 {
+  max-width: 850px;
+  margin-inline: auto;
+  font-size: clamp(48px, 6vw, 84px);
+}
+.landing-close > .landing-width > p {
+  font-size: 16px;
+  color: var(--muted-foreground);
+  margin-top: 25px;
+  line-height: 1.6;
+}
+.close-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-top: 34px;
+}
+.close-action > span {
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.landing-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 115px;
+  padding-block: 40px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.landing-footer-brand {
+  font-family: var(--font-brand);
+  font-size: 34px;
+  letter-spacing: -1.2px;
+  color: var(--foreground);
+}
+.landing-footer > a:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--foreground);
+}
+.landing-footer svg {
+  width: 18px;
+  height: 18px;
+}
+.landing a:focus-visible,
+.flip-card:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+.flip-card:focus-visible {
+  outline-color: var(--foreground);
+}
+.flip-card[data-reduced='true'] .flip-card-back {
+  transform: none;
+}
+.flip-card[data-reduced='true'][data-flipped='true'] .flip-card-front,
+.flip-card[data-reduced='true'][data-flipped='false'] .flip-card-back {
+  visibility: hidden;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+@media (min-width: 1800px) {
+  .landing-hero {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 1000px) {
+  .landing-topbar,
+  .landing-width {
+    width: calc(100% - 64px);
+  }
+  .landing-hero {
+    padding-top: 64px;
+    padding-bottom: 88px;
+  }
+  .landing-hero h1 {
+    font-size: clamp(54px, 8.6vw, 82px);
+  }
+  .principles-layout,
+  .landing-workflow {
+    gap: 54px;
+  }
+  .landing-dark {
+    padding-block: 90px;
+  }
+  .landing-workflow {
+    padding-block: 100px;
+  }
+  .principles-list {
+    gap: 28px;
+  }
+  .principles-list article {
+    gap: 15px;
+  }
+  .landing h2 {
+    font-size: 46px;
+  }
+  .landing-close h2 {
+    font-size: 66px;
+  }
+  .flip-card {
+    height: 390px;
+  }
+  .hero-demo {
+    max-width: 740px;
+    margin-top: 55px;
+  }
+}
+@media (max-width: 650px) {
+  .landing-topbar,
+  .landing-width {
+    width: calc(100% - 40px);
+  }
+  .landing-topbar {
+    height: 88px;
+  }
+  .landing-topbar .brand {
+    font-size: 29px;
+  }
+  .topbar .landing-nav {
+    gap: 0;
+  }
+  .landing-nav a:not(.landing-nav-action) {
+    display: none;
+  }
+  .landing-nav .landing-nav-action {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+  .landing-hero {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+  .landing-hero h1 {
+    font-size: clamp(40px, 10.5vw, 65px);
+    letter-spacing: -0.055em;
+    line-height: 1.13;
+  }
+  .hero-description {
+    font-size: 15px;
+    max-width: 290px;
+    margin: 24px auto 0;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 27px;
+  }
+  .landing [data-slot='button'] {
+    font-size: 13px;
+    height: 46px;
+    padding-inline: 25px;
+  }
+  .hero-note {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+  .landing-notices {
+    margin-top: 24px;
+  }
+  .hero-demo {
+    margin-top: 43px;
+    scroll-margin-top: 20px;
+  }
+  .demo-toolbar {
+    font-size: 10px;
+    gap: 12px;
+    margin-bottom: 13px;
+    padding: 0;
+  }
+  .flip-card {
+    height: 330px;
+    border-radius: 15px;
+  }
+  .flip-card-face {
+    border-radius: 15px;
+    padding: 27px 18px;
+  }
+  .face-label,
+  .face-action {
+    font-size: 11px;
+  }
+  .face-question {
+    font-size: clamp(38px, 10vw, 58px);
+  }
+  .demo-caption {
+    font-size: 11px;
+    margin-top: 18px;
+  }
+  .principles-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .landing-dark {
+    padding-block: 70px;
+  }
+  .section-note {
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+  .landing h2 {
+    font-size: 40px;
+    letter-spacing: -0.05em;
+  }
+  .principles-heading h2 {
+    max-width: 360px;
+  }
+  .principles-heading > p {
+    font-size: 14px;
+    margin-top: 22px;
+    max-width: 330px;
+  }
+  .principles-list {
+    padding: 0;
+    gap: 29px;
+  }
+  .principles-list h3 {
+    font-size: 19px;
+  }
+  .principles-list p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .principles-list article > svg {
+    width: 24px;
+    height: 24px;
+  }
+  .landing-workflow {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-block: 73px;
+  }
+  .workflow-copy h2 {
+    max-width: 350px;
+  }
+  .workflow-copy > p {
+    font-size: 14px;
+    max-width: 330px;
+    margin-top: 22px;
+  }
+  .workflow-link {
+    font-size: 13px;
+    margin-top: 22px;
+  }
+  .workflow-specimen {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  .specimen-title {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .specimen-face {
+    padding: 18px 20px;
+    min-height: 120px;
+  }
+  .specimen-answer {
+    min-height: 155px;
+  }
+  .specimen-face p {
+    font-size: 18px;
+  }
+  .specimen-answer p {
+    font-size: 16px;
+  }
+  .landing-close {
+    padding-top: 70px;
+  }
+  .landing-close h2 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+  .landing-close > .landing-width > p {
+    font-size: 14px;
+    max-width: 280px;
+    margin: 22px auto 0;
+  }
+  .close-action {
+    margin-top: 27px;
+  }
+  .close-action > span {
+    font-size: 11px;
+  }
+  .landing-footer {
+    margin-top: 75px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 28px;
+    text-align: left;
+  }
+  .landing-footer-brand {
+    font-size: 29px;
+  }
+  .landing-footer > span {
+    display: none;
+  }
+  .landing-footer > a:last-child {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heading-word {
+    transform: none !important;
+  }
+  .flip-card-inner {
+    transform: none !important;
+  }
+}
